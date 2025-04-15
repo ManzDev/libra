@@ -1,8 +1,4 @@
-const formatNumber = (n) => {
-  if (n >= 1_000_000) return `${Math.floor(n / 1_000_000)}M`;
-  if (n >= 1_000) return `${Math.floor(n / 1_000)}K`;
-  return n.toString();
-};
+import { formatNumber } from "../modules/formatNumber.js";
 
 export const putGithubStats = (initialStars, initialForks, initialIssues) => {
   const stars = formatNumber(initialStars);

@@ -8,11 +8,12 @@ export const getNPMDownloads = async (packageName) => {
     .then(res => res.json());
 
   // Top 5 de versiones
-  const downloadsCount = Object.fromEntries(
-    Object.entries(downloads)
-      .sort((a, b) => b[1] - a[1]).slice(0, TOP_N_VERSIONS)
-  );
+  const downloadsCount = Object.entries(downloads)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, TOP_N_VERSIONS)
+    .sort((a, b) => b[0].localeCompare(a[0]));
 
-  downloadsCount.total = totalDownloads;
+  downloadsCount.push(["total", totalDownloads]);
+
   return downloadsCount;
 };

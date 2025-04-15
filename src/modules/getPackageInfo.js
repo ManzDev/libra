@@ -3,6 +3,7 @@ export const getPackageInfo = async (name) => {
   return {
     name: data.name,
     description: data.description,
+    main: data.main ?? "",
     version: data.version,
     moduleType: data.type ?? "commonjs",
     githubRepo: data.repository.url.slice(0, -4).replace("git+", ""),    // - ".git"

@@ -4,7 +4,9 @@ import { createTable } from "./modules/createTable.js";
 import { getLibraryInfo } from "./modules/getLibraryInfo.js";
 import { putGithubStats } from "./templates/putGithubStats.js";
 import { putLinks } from "./templates/putLinks.js";
+import { putNPMDownloads } from "./templates/putNPMDownloads.js";
 import { putSpinner } from "./templates/putSpinner.js";
+import { putVersionInfo } from "./templates/putVersionInfo.js";
 
 const table = document.querySelector("table.compare");
 
@@ -35,9 +37,9 @@ table.addEventListener("keyup", async (ev) => {
       // `<img src="${data.avatar}&size=128" alt="${data.name}">${data.name}`,
       data.name,
       data.description,
-      data.version,
+      putVersionInfo(data.version, data.latestReleaseDate, data.moduleType),
       putLinks(data.homepage, data.githubRepo),
-      "",
+      putNPMDownloads(data.npmDownloads, data.version),
       putGithubStats(data.stars, data.forks, data.issues),
       ""
     ];

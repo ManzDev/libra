@@ -101,3 +101,64 @@ table.compare {
     }
   }
 }
+
+.npm-downloads {
+  font-size: 1rem;
+
+  & .row {
+    border: 1px solid #ccc;
+    align-items: center;
+  }
+
+  & .version {
+    width: 75px;
+    background: #ccc;
+    padding: 0.5rem;
+  }
+
+  & .total {
+    margin-top: 0.5rem;
+    background: #2a44ab;
+    color: #fff;
+  }
+
+  & .latest {
+    background: #9d1313;
+    color: #fff;
+  }
+}
+
+/* Utility */
+
+.badge {
+  background: var(--bgcolor);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+
+  &.green { --bgcolor: green; }
+  &.orange { --bgcolor: #d75829; }
+  &.darklime { --bgcolor: #537e1b; }
+}
+
+.row {
+  display: flex;
+  padding: 0 1rem;
+}
+
+small {
+  color: #888;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 {
+  display: inline-grid;
+  grid-template-columns: 150px 1fr;
+}

@@ -10,8 +10,6 @@ export const addColumn = () => {
     row.append(cell);
   });
 
-  console.log({ rows, column });
-
   column[0].insertAdjacentHTML("beforeend", INPUT);
   column[0].querySelector("input").focus();
   return column;
