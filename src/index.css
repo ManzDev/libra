@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Lexend;
+  font-weight: 400;
+  src:
+    url("fonts/lexend-400.woff2") format("woff2"),
+    url("fonts/lexend-400.woff") format("woff");
+}
+
+@font-face {
+  font-family: Lexend;
+  font-weight: 500;
+  src:
+    url("fonts/lexend-500.woff2") format("woff2"),
+    url("fonts/lexend-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: Lexend;
+  font-weight: 600;
+  src:
+    url("fonts/lexend-600.woff2") format("woff2"),
+    url("fonts/lexend-600.woff") format("woff");
+}
+
+body {
+  background: #171717;
+  color: #fff;
+}
+
+.container {
+  --max-width: 1024px;
+
+  /* margin: auto; */
+  max-width: var(--max-width);
+}
+
+.table-container {
+  display: flex;
+  gap: 1rem;
+  font-family: Lexend, sans-serif;
+  font-size: 1.2rem;
+
+  & .column {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    background: #fff;
+    color: #333;
+    padding: 4rem 0;
+
+    & > div {
+      display: grid;
+      align-items: center;
+      padding: 1rem 3rem;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      border-bottom: 1px solid #eee;
+      height: 48px;
+
+      & > div > span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .library & {
+        justify-content: center;
+      }
+
+      & .loading {
+        opacity: 20%;
+      }
+    }
+
+    & input[type="search"] {
+      font-family: Lexend, sans-serif;
+      font-size: 1rem;
+      padding: 0.5rem;
+      background: #ddd;
+      border: 2px solid color-mix(in srgb, var(--bgcolor), #000 30%);
+    }
+
+    & .title {
+      --bgcolor: #7d1cc3;
+
+      font-weight: 500;
+      color: #fff;
+      background: var(--bgcolor);
+    }
+
+    & .description {
+      font-size: 0.9rem;
+    }
+  }
+}
