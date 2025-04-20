@@ -1,7 +1,10 @@
-import { formatNumber } from "../modules/formatNumber.js";
+import Data from "@/data/DataPackage.js";
+import { formatNumber } from "@/modules/formatNumber.js";
 
-export const putNPMDownloads = (versions, currentVersion) => {
-  console.log(versions);
+export const renderNPMDownloads = (name) => {
+
+  const currentVersion = Data.get(name, "package.json", "version");
+  const versions = Data.get(name, "npm", "downloadsCount");
 
   return /* html */`
     <div class="npm-downloads column-2">

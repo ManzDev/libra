@@ -1,0 +1,43 @@
+table.compare {
+  & tr > td {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  & tr:nth-child(1) td {
+    --bgcolor: #fff;
+
+    font-weight: 500;
+    color: #222;
+    background: var(--bgcolor);
+  }
+
+  & tr:nth-child(2) td {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  & :where(td) {
+    text-align: center;
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+
+    & img {
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      opacity: 60%;
+    }
+
+    & .search {
+      font-family: Lexend, sans-serif;
+      font-size: 1rem;
+      padding: 0.5rem;
+      background: #ddd;
+      border: 2px solid color-mix(in srgb, var(--bgcolor), #000 30%);
+    }
+  }
+}

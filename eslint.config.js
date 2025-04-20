@@ -4,7 +4,10 @@ export default [
   ...recommended,
   {
     rules: {
-      /* Tus reglas aquí */
-	 }
+      "unused-imports/no-unused-imports": "warning",
+      "unused-imports/no-unused-vars": "off",
+      "simple-import-sort/imports": "warning",
+      "simple-import-sort/exports": "warning",
+    }
   }
 ];

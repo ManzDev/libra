@@ -1,9 +1,10 @@
-import { addColumn } from "./addColumn.js";
+import { addColumn } from "@/ui/table/Column.js";
+import "./Table.css";
 
 const table = document.querySelector("table.compare");
 
 const FIELDS = [
-  { name: "Nombre", icon: "Description" },
+  { name: "Nombre", icon: null },
   { name: "Descripción", icon: "Description" },
   { name: "Features", icon: "Version" },
   { name: "Links", icon: "Links" },
@@ -15,9 +16,10 @@ const FIELDS = [
 const addHeader = () => {
   FIELDS.forEach(({ name, icon }) => {
     const tr = document.createElement("tr");
+    const svgIcon = icon ? `<img src="/icons/${icon.toLowerCase()}.svg" alt="${icon}">` : "";
     tr.setHTMLUnsafe(/* html */`
       <th>
-        <img src="/icons/${icon.toLowerCase()}.svg" alt="${icon}">
+        ${svgIcon}
         ${name}
       </th>
     `);

@@ -1,0 +1,32 @@
+table.compare {
+  font-family: Lexend, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+  border-spacing: 4px 0;
+
+  & tr > th {
+    min-width: 250px;
+    max-width: 250px;
+    background: #fff;
+    color: #111;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    & img {
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      opacity: 60%;
+    }
+  }
+
+  & tr:nth-child(1) :is(th, td) {
+    --bgcolor: #7d1cc3;
+
+    background: var(--bgcolor, #fff);
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+}

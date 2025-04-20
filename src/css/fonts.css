@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Lexend;
+  font-weight: 400;
+  src:
+    url("fonts/lexend-400.woff2") format("woff2"),
+    url("fonts/lexend-400.woff") format("woff");
+}
+
+@font-face {
+  font-family: Lexend;
+  font-weight: 500;
+  src:
+    url("fonts/lexend-500.woff2") format("woff2"),
+    url("fonts/lexend-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: Lexend;
+  font-weight: 600;
+  src:
+    url("fonts/lexend-600.woff2") format("woff2"),
+    url("fonts/lexend-600.woff") format("woff");
+}

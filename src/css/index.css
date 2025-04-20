@@ -1,0 +1,43 @@
+@import url("./fonts.css");
+
+body {
+  background: #171717;
+  color: #fff;
+}
+
+/* Utility */
+
+.badge {
+  background: var(--bgcolor);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+
+  &.esm, &.ok { --bgcolor: green; }
+  &.cjs, &.no { --bgcolor: #d75829; }
+  &.err { --bgcolor: #a22d2d; }
+}
+
+.row {
+  display: flex;
+  padding: 0 1rem;
+}
+
+small {
+  color: #888;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 {
+  display: inline-grid;
+  grid-template-columns: var(--size, 128px) 1fr;
+  align-items: center;
+}
