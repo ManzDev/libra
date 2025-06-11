@@ -5,12 +5,13 @@ table.compare {
   border-spacing: 4px 0;
 
   & tr > th {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 175px;
+    max-width: 175px;
     background: #fff;
     color: #111;
-    padding: 1rem 0;
+    padding: 1rem;
     border-bottom: 1px solid #eee;
+    text-align: left;
 
     & img {
       vertical-align: middle;

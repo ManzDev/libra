@@ -37,3 +37,30 @@ export const renderGithubStats = (name) => {
     </div>
   `;
 };
+
+export const renderTopics = (name) => {
+
+  const topics = Data.get(name, "github", "topics");
+  const keywords = Data.get(name, "package.json", "keywords");
+
+  const hashtags = topics.length === 0 ? keywords : topics;
+
+  return /* html */`<div>
+    <style>
+      @scope {
+        :scope {
+          --bgcolor: #134aaf;
+
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          color: #fff;
+          gap: 0.5rem;
+          margin: auto 0.5rem;
+        }
+      }
+    </style>
+    ${hashtags.map(hashtag => /* html */`<span class="badge">${hashtag}</span>`).join("")}
+  </div>`;
+
+}

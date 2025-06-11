@@ -12,10 +12,21 @@ export const renderFeatures = (name) => {
   const dependencies = Object.keys(Data.get(name, "package.json", "dependencies"));
 
   return /* html */`<div>
+    <style>
+      @scope {
+        .features {
+          display: flex;
+          flex-wrap: wrap;
+          width: max-content;
+          margin: 0.5rem auto 0;
+          gap: 0.5rem;
+        }
+      }
+    </style>
     <strong>${version}</strong>
     <small>${latestReleaseDate}</small>
     <div class="features">
-      ${modules.map((type) => `<span class="badge ${type}">${type}</span>`)}
+      ${modules.map((type) => `<span class="badge ${type}">${type}</span>`).join("")}
       ${dependencies.length === 0 ? `<span class="badge err">0-dep</span>` : ""}
     </div>
   </div>`;

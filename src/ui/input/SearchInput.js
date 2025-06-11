@@ -10,10 +10,11 @@ import { getDataFrom } from "@/sources/index.js";
 // feature renders
 import { renderData } from "@/renders/data.js";
 import { renderFeatures } from "@/renders/features.js";
-import { renderGithubStats } from "@/renders/githubStats.js";
+import { renderGithubStats, renderTopics } from "@/renders/githubStats.js";
 import { renderLinks } from "@/renders/links.js";
 import { renderNPMDownloads } from "@/renders/NPMDownloads.js";
 import { renderVersionInfo } from "@/renders/versionInfo.js";
+import { renderSizes } from "@/renders/sizes.js";
 
 const table = document.querySelector("table.compare");
 const PLACEHOLDER = "react";
@@ -43,7 +44,8 @@ table.addEventListener("keyup", async (ev) => {
       renderLinks(name),
       renderNPMDownloads(name),
       renderGithubStats(name),
-      ""
+      renderSizes(name),
+      renderTopics(name)
     ];
 
     fields.forEach((field, i) => field.setHTMLUnsafe(fetchedData[i]));

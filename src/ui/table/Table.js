@@ -4,12 +4,13 @@ import "./Table.css";
 const table = document.querySelector("table.compare");
 
 const FIELDS = [
-  { name: "Nombre", icon: null },
-  { name: "Descripción", icon: "Description" },
+  { name: "Name", icon: null },
+  { name: "Description", icon: "Description" },
   { name: "Features", icon: "Version" },
   { name: "Links", icon: "Links" },
-  { name: "Descargas NPM", icon: "Downloads" },
+  { name: "Downloads", icon: "Downloads" },
   { name: "Stats", icon: "Stats" },
+  { name: "Sizes", icon: "Weight" },
   { name: "Topics", icon: "Hashtag" }
 ];
 

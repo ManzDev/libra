@@ -20,6 +20,7 @@ export const addDatalist = (input) => {
 }
 
 // Autocompleted
+/*
 table.addEventListener("input", (ev) => {
   const isSearch = ev.target.nodeName === "INPUT" && ev.target.classList.contains("search");
 
@@ -29,3 +30,4 @@ table.addEventListener("input", (ev) => {
   }
 
 });
+*/

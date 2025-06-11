@@ -1,9 +1,12 @@
 import Data from "@/data/DataPackage.js";
+import fetchCache from "@/data/FetchCache.js";
 
 export const getGithubData = async (name) => {
+
   const github = Data.get(name, "github");
-  const data = await fetch(`https://api.github.com/repos/${github.author}/${github.repoName}`)
-    .then(res => res.json());
+  const repoName = `${github.author}/${github.repoName}`;
+
+  const data = await fetchCache(`https://api.github.com/repos/${repoName}`);
 
   Data.set(name, {
     github: {
@@ -13,14 +16,17 @@ export const getGithubData = async (name) => {
       forks: data.forks,
       issues: data.open_issues,
       homepage: data.homepage,
+      topics: data.topics
     }
   });
 };
 
 export const getLatestInfo = async (name) => {
+
   const github = Data.get(name, "github");
-  const data = await fetch(`https://api.github.com/repos/${github.author}/${github.repoName}/releases/latest`)
-    .then(res => res.json());
+  const repoName = `${github.author}/${github.repoName}`;
+
+  const data = await fetchCache(`https://api.github.com/repos/${repoName}/releases/latest`);
 
   Data.set(name, {
     github: {

@@ -1,15 +1,25 @@
 # Libra
 
-- ✅ Unpkg: https://unpkg.com/front-matter
-- ❌ Registro de NPM: https://registry.npmjs.org/front-matter
-- 🟧 Descarga por versiones: https://api.npmjs.org/versions/fastify/last-week
-- 🟧 Descarga de paquetes: https://api.npmjs.org/downloads/point/last-week/express
-- 🟧 Info de GitHub: https://api.github.com/repos/jxson/front-matter
+- Caché de peticiones
+- Control de errores / 403 / 500
+- BundleJS -> Cambiar bundlephobia -> https://bundlejs.com/
+- Icono de tamaño:
+  - Ardilla: Tamaño pequeño ( < 5KB)
+  - Capybara: Tamaño medio ( < 100KB)
+  - Elefante: Tamaño grande ( > 100KB )
+- Debounce para autocompletado (y mejorarlo)
+- Licencia
+- Types (incluye tipos)
+- Dependencias
+- Revisar public/spinner.svg y revisar fuentes no usadas
+-
 
-- Dependencias vs DevDependencies (0-dep)
-- ESM vs CommonJS
-- NPMs (mejora de la api de NPM): https://api-docs.npms.io/
-- Bundlephobia: https://bundlephobia.com/api/size?package=front-matter
+* Sacar de devDependencies con que herramientas está construido (webpack, eslint, jsdoc...)
+* en Github, sacar el language (logo del lenguaje)
+* Phaser no incluye exports
+
+# ¿Hacemos algo con esto?
+
 - Jsdelivr: https://data.jsdelivr.com/v1/stats/packages/npm/front-matter + info
 - CDNjs: https://cdnjs.com/api
 - Libreries.io: https://libraries.io/api/github/jxson/front-matter

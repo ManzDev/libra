@@ -7,11 +7,11 @@ export const renderNPMDownloads = (name) => {
   const currentVersion = Data.get(name, "package.json", "version");
   const versions = Data.get(name, "npm", "downloadsCount");
   const [, total] = versions.pop();
-  const max = Math.max(...versions.map(([version, q]) => q));
+  const max = Math.max(...versions.map(([version, q]) => q ?? 0));
 
   const generateBar = ([ version, number ]) => {
-    const quantity = formatNumber(number);
-    const size = Math.floor((number * 100) / max);
+    const quantity = formatNumber(number ?? 0);
+    const size = Math.floor(((number ?? 0) * 100) / max);
     const fontWeight = size === 100 ? "highlight" : "";
 
     return /* html */`<div class="column ${fontWeight}">

@@ -2,7 +2,7 @@ import Data from "@/data/DataPackage.js";
 
 export const renderLinks = (name) => {
 
-  const { homepage, url } = Data.get(name, "github", )
+  const { homepage, url } = Data.get(name, "github")
 
   return /* html */`
     <div>

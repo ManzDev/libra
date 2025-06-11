@@ -5,11 +5,6 @@ const getOrCreatePackage = (packageName) => {
   return db.get(packageName);
 };
 
-const setItem = (packageName, key, value) => {
-  const pkg = getOrCreatePackage(packageName);
-  pkg.set(key, value);
-};
-
 const set = (packageName, objectData) => {
   const pkg = getOrCreatePackage(packageName);
   for (const [key, value] of Object.entries(objectData)) {
@@ -34,13 +29,7 @@ const get = (packageName, ...path) => {
   return current ?? null;
 };
 
-const getItem = (packageName, key) => {
-  return db.get(packageName)?.get(key) ?? null;
-};
-
 export default {
   set,
-  setItem,
-  get,
-  getItem
+  get
 };
