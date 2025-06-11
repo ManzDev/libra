@@ -17,7 +17,7 @@ const FIELDS = [
 const addHeader = () => {
   FIELDS.forEach(({ name, icon }) => {
     const tr = document.createElement("tr");
-    const svgIcon = icon ? `<img src="/icons/${icon.toLowerCase()}.svg" alt="${icon}">` : "";
+    const svgIcon = icon ? `<img src="icons/${icon.toLowerCase()}.svg" alt="${icon}">` : "";
     tr.setHTMLUnsafe(/* html */`
       <th>
         ${svgIcon}
